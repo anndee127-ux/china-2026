@@ -85,7 +85,7 @@ const ITINERARY = [
     hotel: "Eastern House Xi’an", transport: "High Speed Rail", duration: "09:55 → 14:05",
     image: img("1770035675295-336e5e1e7ed0"),
     activities: [
-      { name: "🚄  Beijing West → Xi’an North  ·  09:55 – 14:05  (4h 10m, 1st Class)", type: "transport" },
+      { name: "🚄  Beijing West → Xi’an North  ·  09:55 – 14:05  (4h 10m, G365, 1st Class)", type: "transport" },
       { name: "🚐  Private hire pick-up from Xi’an North → Hotel", type: "transport" },
       { name: "Hotel Check-in", type: "hotel" },
       { name: "Beiyuanmen Muslim Street (Evening)", type: "attraction" },
@@ -94,7 +94,7 @@ const ITINERARY = [
       { name: "Tongshengxiang", cuisine: "Xi’an Muslim", price: "¥¥", distance: "Muslim Street", dish: "Yang Rou Paomo (lamb bread soup)" },
       { name: "Laosunji Paomo", cuisine: "Shaanxi", price: "¥¥", distance: "Muslim Quarter", dish: "Paomo bread in lamb broth" },
     ],
-    notes: "Depart Beijing West at 09:55, arrive Xi’an North at 14:05 — 4 hours 10 minutes. 1st Class. Arrive at the station at least 45 minutes early and keep your passport ready for boarding.",
+    notes: "Depart Beijing West at 09:55 on G365, arrive Xi’an North at 14:05 — 4 hours 10 minutes. 1st Class. Arrive at the station at least 45 minutes early and keep your passport ready for boarding.",
   },
   {
     day: 5, date: "Sat 24 Oct", city: "Xi’an", cityColor: "#D4A017",
@@ -133,11 +133,11 @@ const ITINERARY = [
   },
   {
     day: 7, date: "Mon 26 Oct", city: "Beijing", cityColor: "#C8102E",
-    hotel: "Beijing Xinqiao Hotel", transport: "High Speed Rail", duration: "10:09 → 14:26",
+    hotel: "Beijing Xinqiao Hotel", transport: "High Speed Rail", duration: "10:02 → 14:21",
     image: img("1614006620172-ce0fb5969981"),
     activities: [
       { name: "🚐  Hotel pick-up → Xi’an North Station (by local tour)", type: "transport" },
-      { name: "🚄  Xi’an North → Beijing West  ·  10:09 – 14:26  (4h 17m, 1st Class)", type: "transport" },
+      { name: "🚄  Xi’an North → Beijing West  ·  10:02 – 14:21  (4h 19m, G358, 2nd Class)", type: "transport" },
       { name: "Hotel Check-in", type: "hotel" },
       { name: "Rest & Recovery", type: "walk" },
     ],
@@ -145,7 +145,7 @@ const ITINERARY = [
       { name: "Din Tai Fung Beijing", cuisine: "Dumplings", price: "¥¥¥", distance: "Near hotel", dish: "Xiao Long Bao (soup dumplings)" },
       { name: "Haidilao Hot Pot", cuisine: "Hot Pot", price: "¥¥¥", distance: "10 min", dish: "Classic spicy broth" },
     ],
-    notes: "Depart Xi’an North at 10:09, arrive Beijing West at 14:26 — 4 hours 17 minutes. 1st Class. A comfortable travel day — enjoy the scenery and rest before the final Beijing days.",
+    notes: "Depart Xi’an North at 10:02 on G358, arrive Beijing West at 14:21 — 4 hours 19 minutes. 2nd Class. A comfortable travel day — enjoy the scenery and rest before the final Beijing days.",
   },
   {
     day: 8, date: "Tue 27 Oct", city: "Beijing · Gubei Water Town", cityColor: "#4A7FA5",
@@ -495,8 +495,8 @@ const TRAVEL_TIPS = [
   {
     id: "rail", icon: "train", category: "Rail Tickets",
     journeys: [
-      { date: "Thu 23 Oct", from: "Beijing West", dep: "09:55", to: "Xi’an North", arr: "14:05", duration: "4h 10m", cls: "1st Class" },
-      { date: "Mon 26 Oct", from: "Xi’an North", dep: "10:09", to: "Beijing West", arr: "14:26", duration: "4h 17m", cls: "1st Class" },
+      { date: "Thu 23 Oct", from: "Beijing West", dep: "09:55", to: "Xi’an North", arr: "14:05", duration: "4h 10m", cls: "G365 · 1st Class" },
+      { date: "Mon 26 Oct", from: "Xi’an North", dep: "10:02", to: "Beijing West", arr: "14:21", duration: "4h 19m", cls: "G358 · 2nd Class" },
     ],
     items: ["Tickets require your passport — keep it accessible on both train days", "Arrive at the station at least 45 minutes before departure"],
   },
@@ -619,17 +619,17 @@ const HSR_JOURNEYS = [
     dep: "09:55",
     arr: "14:05",
     duration: "4h 10m",
-    class: "1st Class",
+    class: "G365 · 1st Class",
     note: "Passport required at boarding. Arrive at least 45 min early.",
   },
   {
     date: "Mon 26 Oct",
     from: "Xi'an North",
     to: "Beijing West",
-    dep: "10:09",
-    arr: "14:26",
-    duration: "4h 17m",
-    class: "1st Class",
+    dep: "10:02",
+    arr: "14:21",
+    duration: "4h 19m",
+    class: "G358 · 2nd Class",
     note: "Passport required at boarding. Arrive at least 45 min early.",
   },
 ];
