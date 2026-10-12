@@ -85,7 +85,7 @@ const ITINERARY = [
     hotel: "Eastern House Xi’an", transport: "High Speed Rail", duration: "09:55 → 14:05",
     image: img("1770035675295-336e5e1e7ed0"),
     activities: [
-      { name: "🚄  Beijing West → Xi’an North  ·  09:55 – 14:05  (4h 10m, G365, 1st Class)", type: "transport" },
+      { name: "🚄  Beijing West → Xi’an North  ·  09:55 – 14:05  (4h 10m, G365, 2nd Class)", type: "transport" },
       { name: "🚐  Private hire pick-up from Xi’an North → Hotel", type: "transport" },
       { name: "Hotel Check-in", type: "hotel" },
       { name: "Beiyuanmen Muslim Street (Evening)", type: "attraction" },
@@ -94,7 +94,7 @@ const ITINERARY = [
       { name: "Tongshengxiang", cuisine: "Xi’an Muslim", price: "¥¥", distance: "Muslim Street", dish: "Yang Rou Paomo (lamb bread soup)" },
       { name: "Laosunji Paomo", cuisine: "Shaanxi", price: "¥¥", distance: "Muslim Quarter", dish: "Paomo bread in lamb broth" },
     ],
-    notes: "Depart Beijing West at 09:55 on G365, arrive Xi’an North at 14:05 — 4 hours 10 minutes. 1st Class. Arrive at the station at least 45 minutes early and keep your passport ready for boarding.",
+    notes: "Depart Beijing West at 09:55 on G365, arrive Xi’an North at 14:05 — 4 hours 10 minutes. 2nd Class. Arrive at the station at least 45 minutes early and keep your passport ready for boarding.",
   },
   {
     day: 5, date: "Sat 24 Oct", city: "Xi’an", cityColor: "#D4A017",
@@ -495,14 +495,10 @@ const TRAVEL_TIPS = [
   {
     id: "rail", icon: "train", category: "Rail Tickets",
     journeys: [
-      { date: "Thu 23 Oct", from: "Beijing West", dep: "09:55", to: "Xi’an North", arr: "14:05", duration: "4h 10m", cls: "G365 · 1st Class" },
+      { date: "Thu 23 Oct", from: "Beijing West", dep: "09:55", to: "Xi’an North", arr: "14:05", duration: "4h 10m", cls: "G365 · 2nd Class" },
       { date: "Mon 26 Oct", from: "Xi’an North", dep: "10:02", to: "Beijing West", arr: "14:21", duration: "4h 19m", cls: "G358 · 2nd Class" },
     ],
     items: ["Tickets require your passport — keep it accessible on both train days", "Arrive at the station at least 45 minutes before departure"],
-  },
-  {
-    id: "internet", icon: "wifi", category: "Internet & Apps",
-    items: ["WeChat is essential — set up your account before departing", "WeChat Pay or Alipay for cashless payments — near-universal", "Download: DiDi (taxis), Baidu Maps (offline), Google Translate (offline Chinese pack)"],
   },
   {
     id: "packing", icon: "package", category: "Packing Essentials",
@@ -619,7 +615,9 @@ const HSR_JOURNEYS = [
     dep: "09:55",
     arr: "14:05",
     duration: "4h 10m",
-    class: "G365 · 1st Class",
+    class: "G365 · 2nd Class",
+    car: "Car 13",
+    seats: "1C · 1F · 2A · 2B · 2C · 3A · 3B",
     note: "Passport required at boarding. Arrive at least 45 min early.",
   },
   {
@@ -630,6 +628,8 @@ const HSR_JOURNEYS = [
     arr: "14:21",
     duration: "4h 19m",
     class: "G358 · 2nd Class",
+    car: "Car 7",
+    seats: "1A · 1B · 1C · 1D · 1F · 2A · 2B",
     note: "Passport required at boarding. Arrive at least 45 min early.",
   },
 ];
@@ -720,7 +720,18 @@ function HSRModal({ onClose }: { onClose: () => void }) {
                   <p className="text-[#A8906A] text-xs mt-1 leading-tight">{j.to}</p>
                 </div>
               </div>
-              <p className="text-[#A8906A] text-xs mt-4 leading-relaxed">{j.note}</p>
+              <div className="flex items-center gap-4 mt-4 pt-4 border-t border-[rgba(212,160,23,0.1)]">
+                <div>
+                  <p className="text-[#A8906A] text-[10px] tracking-widest mb-0.5">CAR</p>
+                  <p className="text-[#F5EDD6] text-sm font-medium">{j.car}</p>
+                </div>
+                <div className="w-px h-8 bg-[rgba(212,160,23,0.15)]" />
+                <div className="min-w-0">
+                  <p className="text-[#A8906A] text-[10px] tracking-widest mb-0.5">SEATS</p>
+                  <p className="text-[#F5EDD6] text-sm font-medium">{j.seats}</p>
+                </div>
+              </div>
+              <p className="text-[#A8906A] text-xs mt-3 leading-relaxed">{j.note}</p>
             </div>
           ))}
         </div>
